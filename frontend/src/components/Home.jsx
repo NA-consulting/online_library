@@ -1,8 +1,7 @@
+// src/components/Home.jsx
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from './mise_enPage/Navbar';
 import Header from './mise_enPage/Header';
-import Footer from './mise_enPage/Footer';
 import backgroundImage from '../assets/69.jpg'; // Assurez-vous que le chemin est correct
 
 // Styles avec styled-components
@@ -81,7 +80,6 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Navbar />
             <HomeContainer>
                 <HomeContent>
                     <Heading>Welcome to the Online Library</Heading>
@@ -97,7 +95,6 @@ const Home = () => {
                     </p>
                 </AdditionalContent>
             </HomeContainer>
-            <Footer />
         </>
     );
 };

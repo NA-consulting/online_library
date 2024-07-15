@@ -1,8 +1,8 @@
+// src/components/mise_enPage/Navbar.jsx
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// Styles pour la Navbar
 const NavbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,7 @@ const NavLink = styled(Link)`
 
 const Navbar = () => {
     return (
+        <div>
         <NavbarContainer>
             <div>Online Library</div>
             <NavLinks>
@@ -36,8 +37,9 @@ const Navbar = () => {
                 <NavLink to="/profile">Profile</NavLink>
                 <NavLink to="/register">Register</NavLink>
                 <NavLink to="/login">Login</NavLink>
+                <NavLink to="/review">Review</NavLink> {/* Ajout du lien vers le formulaire d'avis */}
             </NavLinks>
-        </NavbarContainer>
+        </NavbarContainer></div>
     );
 };
 

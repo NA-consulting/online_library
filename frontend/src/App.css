@@ -1,0 +1,55 @@
+.App {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+
+  
+  .App-header {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .App-main {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  /* Ajout de styles pour justifier le texte dans les commentaires */
+  .review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .review {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left; /* Justifier le texte à gauche */
+    overflow-wrap: break-word; /* Assurer le retour à la ligne en cas de longs commentaires */
+  }
+  

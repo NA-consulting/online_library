@@ -1,25 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Register from './components/Register';
 import Login from './components/Login';
 import Profile from './components/Profile';
-
-const ProtectedRoute = ({ element: Component, ...rest }) => {
-  const isAuthenticated = !!localStorage.getItem('token');
-  return isAuthenticated ? <Component {...rest} /> : <Navigate to="/login" />;
-};
+import Register from './components/Register';
+import ReviewForm from './components/ReviewForm';
+import ReviewsList from './components/ReviewsList'; // Importer ReviewsList
+import Navbar from './components/mise_enPage/Navbar';
+import Footer from './components/mise_enPage/Footer';
+import './App.css';
 
 const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
-        {/* Ajoutez d'autres routes ici */}
-      </Routes>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/review" element={<ReviewForm />} />
+          <Route path="/reviews" element={<ReviewsList />} /> {/* Ajouter la route pour ReviewsList */}
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 };
