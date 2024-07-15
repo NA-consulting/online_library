@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { db } from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import Navbar from './mise_enPage/Navbar';
+import Header from './mise_enPage/Header';
+import Footer from './mise_enPage/Footer';
 
 const ReviewForm = () => {
   const [name, setName] = useState('');

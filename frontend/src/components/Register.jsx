@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../services/api';
 import styled from 'styled-components';
-import Navbar from './mise_enPage/Navbar';
+
 import Header from './mise_enPage/Header';
 import Footer from './mise_enPage/Footer';
 
