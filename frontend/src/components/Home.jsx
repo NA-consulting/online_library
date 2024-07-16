@@ -1,4 +1,6 @@
+// Home.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Navbar from './mise_enPage/Navbar';
 import Header from './mise_enPage/Header';
@@ -78,6 +80,12 @@ const AdditionalContent = styled.div`
 `;
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleGetStartedClick = () => {
+        navigate('/collection');
+    };
+
     return (
         <>
             <Header />
@@ -88,7 +96,7 @@ const Home = () => {
                     <Paragraph>
                         Our library offers a wide range of books across various genres. Whether you're looking for the latest bestsellers, classic literature, or academic resources, we have something for everyone.
                     </Paragraph>
-                    <CTAButton>Get Started</CTAButton>
+                    <CTAButton onClick={handleGetStartedClick}>Get Started</CTAButton>
                 </HomeContent>
                 <AdditionalContent>
                     <h2>Discover More</h2>

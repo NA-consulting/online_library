@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import Collection from './components/Collection';
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
+        <Route path="/collection" element={<Collection />} />
         {/* Ajoutez d'autres routes ici */}
       </Routes>
     </Router>
