@@ -227,12 +227,13 @@ const Collection = () => {
         {books.map((book, index) => (
           <BookCard key={index}>
             <BookImage src={book.image} alt={book.title} />
+            <AddToAccountButton onClick={() => handleAddToAccount(book)}>
+              Emprunter
+            </AddToAccountButton>
             <BookTitle>{book.title}</BookTitle>
             <BookAuthor>{book.author}</BookAuthor>
             <BookDescription>{book.description}</BookDescription>
-            <AddToAccountButton onClick={() => handleAddToAccount(book)}>
-              Ajouter au Compte
-            </AddToAccountButton>
+            
           </BookCard>
         ))}
       </BookGrid>
