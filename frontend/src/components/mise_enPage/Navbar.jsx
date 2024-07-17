@@ -36,6 +36,7 @@ const Navbar = () => {
                 <NavLink to="/profile">Profile</NavLink>
                 <NavLink to="/register">Register</NavLink>
                 <NavLink to="/login">Login</NavLink>
+                <NavLink to="/review">Review</NavLink>
             </NavLinks>
         </NavbarContainer>
     );

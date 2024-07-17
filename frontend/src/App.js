@@ -5,6 +5,10 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Profile from './components/Profile';
 import Collection from './components/Collection';
+import ReviewForm from './components/ReviewForm';
+import ReviewsList from './components/ReviewsList';
+import Footer from './components/mise_enPage/Footer';
+import Navbar from './components/mise_enPage/Navbar';
 
 const ProtectedRoute = ({ element: Component, ...rest }) => {
   const isAuthenticated = !!localStorage.getItem('token');
@@ -20,10 +24,22 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/review" element={<ReviewComponent />} />
         {/* Ajoutez d'autres routes ici */}
       </Routes>
     </Router>
   );
 };
+
+function ReviewComponent() {
+  return (
+    <>
+      <Navbar />
+      <ReviewForm />
+      <ReviewsList />
+      <Footer />
+    </>
+  );
+}
 
 export default App;
